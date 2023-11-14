@@ -11,7 +11,7 @@ import SwiftUI
 struct BlackJackDesktopApp: App {
     var body: some Scene {
         WindowGroup {
-            MordaView()
+            GameMainScreen()
         }
     }
 }

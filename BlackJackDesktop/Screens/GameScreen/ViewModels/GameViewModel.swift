@@ -1,5 +1,5 @@
 //
-//  MordaViewModel.swift
+//  GameViewModel.swift
 //  BlackJackDesktop
 //
 //  Created by Snow Lukin on 24.10.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class MordaViewModel: ObservableObject {
+final class GameViewModel: ObservableObject {
     @Published var money = 100_000
     @Published var bet = 100
     
@@ -18,7 +18,7 @@ final class MordaViewModel: ObservableObject {
     
     @Published var isDealersTurn = false
     
-    @Published var mordaState = MordaState.starting
+    @Published var gameState = GameState.starting
     
     @Published var gameStatus = GameStatus.inGame {
         didSet {
@@ -44,47 +44,40 @@ final class MordaViewModel: ObservableObject {
         dealerScore = 0
         bet = 0
         
-        mordaState = .starting
+        gameState = .starting
         isDealersTurn = false
         
-        playerTakes()
-        playerTakes()
-        dealerTakes()
-        dealerTakes()
+        for _ in 1...2 {
+            playerTakes()
+            dealerTakes(shouldCheck: false)
+        }
         
         if playerScore == 21 {
             isDealersTurn = true
-            if dealerScore == 21 {
-                gameStatus = .draw
-            } else {
-                gameStatus = .blackJack
-            }
-            mordaState = .endgame
+            gameStatus = dealerScore == 21 ? .draw : .blackJack
+            gameState = .endgame
         }
     }
     
     func startDealersTurn() {
         isDealersTurn = true
-        
+
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
-            if self.dealerScore < self.playerScore, self.dealerScore < 21, self.mordaState != .endgame {
+            if self.dealerScore < self.playerScore, self.dealerScore < 21, self.gameState != .endgame {
                 withAnimation(.easeInOut) {
                     self.dealerTakes()
-                    self.checkDealer()
                 }
             } else {
                 timer.invalidate()
                 withAnimation {
-                    if self.mordaState != .endgame {
-                        self.mordaState = .endgame
-                    }
+                    self.gameState = .endgame
                 }
             }
         }
     }
 }
 
-extension MordaViewModel {
+extension GameViewModel {
     func playerTakes() {
         let card = deck.removeLast()
         playerCards.append(card)
@@ -92,10 +85,13 @@ extension MordaViewModel {
         checkPlayer()
     }
     
-    func dealerTakes() {
+    func dealerTakes(shouldCheck: Bool = true) {
         let card = deck.removeLast()
         dealerCards.append(card)
         dealerScore = handCounter.calculatePoints(for: dealerCards)
+        if shouldCheck {
+            checkDealer()
+        }
     }
     
     func increaseBet() {
@@ -113,20 +109,20 @@ extension MordaViewModel {
     private func checkPlayer() {
         if playerScore > 21 {
             gameStatus = .busted
-            mordaState = .endgame
+            gameState = .endgame
         }
     }
     
     private func checkDealer() {
         if dealerScore == playerScore {
             gameStatus = .draw
-            mordaState = .endgame
+            gameState = .endgame
         } else if dealerScore > 21 {
             gameStatus = .victory
-            mordaState = .endgame
+            gameState = .endgame
         } else if dealerScore > playerScore {
             gameStatus = .lost
-            mordaState = .endgame
+            gameState = .endgame
         }
     }
     

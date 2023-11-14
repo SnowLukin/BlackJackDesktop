@@ -1,5 +1,5 @@
 //
-//  MordaView.swift
+//  GameMainScreen.swift
 //  BlackJackDesktop
 //
 //  Created by Snow Lukin on 20.10.2023.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct MordaView: View {
+struct GameMainScreen: View {
     
-    @StateObject private var viewModel = MordaViewModel()
+    @StateObject private var viewModel = GameViewModel()
     
     var body: some View {
         ZStack {
             BackgroundView()
             
-            if viewModel.mordaState == .endgame {
+            if viewModel.gameState == .endgame {
                 endGameMessage
             }
             
@@ -31,7 +31,7 @@ struct MordaView: View {
                     .background(Colors.secondary)
                     .padding()
                 
-                switch viewModel.mordaState {
+                switch viewModel.gameState {
                 case .starting, .playing, .endgame:
                     playingContent
                 case .betting:
@@ -46,10 +46,10 @@ struct MordaView: View {
 }
 
 #Preview {
-    MordaView()
+    GameMainScreen()
 }
 
-extension MordaView {
+extension GameMainScreen {
     private var playingContent: some View {
         Group {
             VStack(spacing: 140) {
@@ -84,23 +84,23 @@ extension MordaView {
     
     private var buttons: some View {
         HStack(spacing: 37) {
-            switch viewModel.mordaState {
+            switch viewModel.gameState {
             case .starting:
                 AppButton("Start Game") {
                     withAnimation {
-                        viewModel.mordaState = .playing
+                        viewModel.gameState = .playing
                     }
                 }
                 
                 AppButton("Place Bet") {
                     withAnimation {
-                        viewModel.mordaState = .betting
+                        viewModel.gameState = .betting
                     }
                 }
             case .betting:
                 AppButton("Done") {
                     withAnimation {
-                        viewModel.mordaState = .starting
+                        viewModel.gameState = .starting
                     }
                 }
             case .playing:

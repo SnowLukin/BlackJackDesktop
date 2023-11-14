@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D72211132AE7C42100375AA1 /* MordaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72211122AE7C42100375AA1 /* MordaViewModel.swift */; };
-		D72211162AE7CC3800375AA1 /* MordaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72211152AE7CC3800375AA1 /* MordaState.swift */; };
+		D72211132AE7C42100375AA1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72211122AE7C42100375AA1 /* GameViewModel.swift */; };
+		D72211162AE7CC3800375AA1 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72211152AE7CC3800375AA1 /* GameState.swift */; };
 		D72211182AE7D49000375AA1 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72211172AE7D49000375AA1 /* GameStatus.swift */; };
 		D7E32C7A2AE1B10D00F0960E /* BlackJackDesktopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32C792AE1B10D00F0960E /* BlackJackDesktopApp.swift */; };
 		D7E32C7E2AE1B11000F0960E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E32C7D2AE1B11000F0960E /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 		D7E32CA02AE1DCE500F0960E /* GameScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32C9F2AE1DCE500F0960E /* GameScoreView.swift */; };
 		D7E32CA22AE1DECD00F0960E /* BankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CA12AE1DECD00F0960E /* BankView.swift */; };
 		D7E32CA42AE1E00200F0960E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CA32AE1E00200F0960E /* Fonts.swift */; };
-		D7E32CA72AE1E28E00F0960E /* MordaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CA62AE1E28E00F0960E /* MordaView.swift */; };
+		D7E32CA72AE1E28E00F0960E /* GameMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CA62AE1E28E00F0960E /* GameMainScreen.swift */; };
 		D7E32CA92AE1E2FA00F0960E /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CA82AE1E2FA00F0960E /* BackgroundView.swift */; };
 		D7E32CAD2AE1EACA00F0960E /* AddCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CAC2AE1EACA00F0960E /* AddCardButton.swift */; };
 		D7E32CAF2AE1ED4C00F0960E /* PlusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E32CAE2AE1ED4C00F0960E /* PlusCard.swift */; };
@@ -37,8 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D72211122AE7C42100375AA1 /* MordaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MordaViewModel.swift; sourceTree = "<group>"; };
-		D72211152AE7CC3800375AA1 /* MordaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MordaState.swift; sourceTree = "<group>"; };
+		D72211122AE7C42100375AA1 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		D72211152AE7CC3800375AA1 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		D72211172AE7D49000375AA1 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		D7E32C762AE1B10D00F0960E /* BlackJackDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJackDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E32C792AE1B10D00F0960E /* BlackJackDesktopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackDesktopApp.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		D7E32C9F2AE1DCE500F0960E /* GameScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreView.swift; sourceTree = "<group>"; };
 		D7E32CA12AE1DECD00F0960E /* BankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankView.swift; sourceTree = "<group>"; };
 		D7E32CA32AE1E00200F0960E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		D7E32CA62AE1E28E00F0960E /* MordaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MordaView.swift; sourceTree = "<group>"; };
+		D7E32CA62AE1E28E00F0960E /* GameMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMainScreen.swift; sourceTree = "<group>"; };
 		D7E32CA82AE1E2FA00F0960E /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		D7E32CAC2AE1EACA00F0960E /* AddCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardButton.swift; sourceTree = "<group>"; };
 		D7E32CAE2AE1ED4C00F0960E /* PlusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCard.swift; sourceTree = "<group>"; };
@@ -82,8 +82,7 @@
 		D72211112AE7C41600375AA1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D7E32CA52AE1E28600F0960E /* Views */,
-				D72211122AE7C42100375AA1 /* MordaViewModel.swift */,
+				D72211122AE7C42100375AA1 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -91,7 +90,7 @@
 		D72211142AE7CC2600375AA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D72211152AE7CC3800375AA1 /* MordaState.swift */,
+				D72211152AE7CC3800375AA1 /* GameState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,7 +116,7 @@
 			children = (
 				D7E32C792AE1B10D00F0960E /* BlackJackDesktopApp.swift */,
 				D7E32C882AE1B17300F0960E /* Base */,
-				D7E32C892AE1B17900F0960E /* Features */,
+				D7E32C892AE1B17900F0960E /* Screens */,
 				D7E32C8A2AE1D5F700F0960E /* Resources */,
 				D7E32C822AE1B11000F0960E /* BlackJackDesktop.entitlements */,
 				D7E32C7F2AE1B11000F0960E /* Preview Content */,
@@ -142,12 +141,12 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		D7E32C892AE1B17900F0960E /* Features */ = {
+		D7E32C892AE1B17900F0960E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D7E32C942AE1D8FC00F0960E /* GameStart */,
+				D7E32C942AE1D8FC00F0960E /* GameScreen */,
 			);
-			path = Features;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		D7E32C8A2AE1D5F700F0960E /* Resources */ = {
@@ -176,13 +175,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D7E32C942AE1D8FC00F0960E /* GameStart */ = {
+		D7E32C942AE1D8FC00F0960E /* GameScreen */ = {
 			isa = PBXGroup;
 			children = (
 				D72211142AE7CC2600375AA1 /* Models */,
+				D7E32CA52AE1E28600F0960E /* Views */,
 				D72211112AE7C41600375AA1 /* ViewModels */,
 			);
-			path = GameStart;
+			path = GameScreen;
 			sourceTree = "<group>";
 		};
 		D7E32C952AE1D90B00F0960E /* Views */ = {
@@ -205,7 +205,7 @@
 		D7E32CA52AE1E28600F0960E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D7E32CA62AE1E28E00F0960E /* MordaView.swift */,
+				D7E32CA62AE1E28E00F0960E /* GameMainScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,13 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E32CA92AE1E2FA00F0960E /* BackgroundView.swift in Sources */,
-				D7E32CA72AE1E28E00F0960E /* MordaView.swift in Sources */,
+				D7E32CA72AE1E28E00F0960E /* GameMainScreen.swift in Sources */,
 				D7E32CB92AE283F400F0960E /* GameRules.swift in Sources */,
-				D72211132AE7C42100375AA1 /* MordaViewModel.swift in Sources */,
+				D72211132AE7C42100375AA1 /* GameViewModel.swift in Sources */,
 				D7E32CA22AE1DECD00F0960E /* BankView.swift in Sources */,
 				D7E32C972AE1D91700F0960E /* CardView.swift in Sources */,
 				D7E32CA42AE1E00200F0960E /* Fonts.swift in Sources */,
-				D72211162AE7CC3800375AA1 /* MordaState.swift in Sources */,
+				D72211162AE7CC3800375AA1 /* GameState.swift in Sources */,
 				D7E32CB52AE2817D00F0960E /* BettingView.swift in Sources */,
 				D7E32CB32AE1F6FC00F0960E /* CurrentBetView.swift in Sources */,
 				D7E32CAF2AE1ED4C00F0960E /* PlusCard.swift in Sources */,
