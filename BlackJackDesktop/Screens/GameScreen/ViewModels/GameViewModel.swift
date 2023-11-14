@@ -61,6 +61,17 @@ final class GameViewModel: ObservableObject {
     
     func startDealersTurn() {
         isDealersTurn = true
+        
+        if self.dealerScore > self.playerScore {
+            gameStatus = .lost
+            gameState = .endgame
+            return
+        }
+        if self.dealerScore == self.playerScore {
+            gameStatus = .draw
+            gameState = .endgame
+            return
+        }
 
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             if self.dealerScore < self.playerScore, self.dealerScore < 21, self.gameState != .endgame {
@@ -69,9 +80,6 @@ final class GameViewModel: ObservableObject {
                 }
             } else {
                 timer.invalidate()
-                withAnimation {
-                    self.gameState = .endgame
-                }
             }
         }
     }
